@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { UseSession, useSession, signIn, signOut } from "next-auth/react";
+import { UseSession, signIn, signOut } from "next-auth/react";
 
 const Navbar = () => {
   //returns an object
   const { status } = useSession();
+  console.log(status);
   return (
     <div className="flex justify-between shadow-md items-center p-5 my-5">
       <Link href={"/"} className="font-2xl text-blue-600 text-lg">
